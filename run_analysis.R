@@ -24,4 +24,5 @@ tot2<-tot[,sel]
 tidy<-aggregate(tot2[,2:67],by=list(tot2$ID,tot2$activity),FUN=mean)
 names(tidy)[1:2]<-c("ID","activity")
 ###save
-save(tidy,file="tidy.Rda")
+save(tidy,file="tidy.txt")
+write.table(tidy, "tidy.txt", sep="\t") 
