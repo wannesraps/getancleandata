@@ -1,0 +1,18 @@
+---
+title: "ReadMe"
+date: "27 Jul 2014"
+output: html_document
+---
+
+##Project “Getting and cleaning data”
+
+Following files are included:
+
+1. CodeBook.Rmd: Markdown document describing the dataset, transformations and variables
+
+2. tidy.txt: data file ready for analysis. Contains mean of the (standardized) measurements for each individual for each activity
+
+3. run_analysis.R: R script to download, load, merge, label and aggregate the source data into the tidy.Rda data file
+
+
+
