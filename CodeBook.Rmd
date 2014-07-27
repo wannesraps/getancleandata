@@ -1,0 +1,108 @@
+---
+title: "CodeBook"
+output: html_document
+---
+##Dataset tidy
+
+###Narrative
+
+The dataset "tidy" contains summary measurements of 30 individuals, each for 6 activity types.
+
+It includes 68 variables.
+
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+###Transformations
+1. All measurements were merged together from test and train datasets.
+2. Only variables containing mean and standard deviations were kept.
+3. The mean of all the means and standard deviations for each individual for each of the 6 activities was taken.
+
+###Variable list
+
+Variable | Description
+---------|------------
+ID| participant ID number|
+activity| activity number (1 WALKING, 2 WALKING_UPSTAIRS, 3 WALKING_DOWNSTAIRS, 4 SITTING, 5 STANDING, 6 LAYING)|
+tBodyAcc-mean()-X|see narrative above|
+tBodyAcc-mean()-Y|see narrative above|
+tBodyAcc-mean()-Z|see narrative above|
+tGravityAcc-mean()-X|see narrative above|
+tGravityAcc-mean()-Y|see narrative above|
+tGravityAcc-mean()-Z|see narrative above|
+tBodyAccJerk-mean()-X|see narrative above|
+tBodyAccJerk-mean()-Y|see narrative above|
+tBodyAccJerk-mean()-Z|see narrative above|
+tBodyGyro-mean()-X|see narrative above|
+tBodyGyro-mean()-Y|see narrative above|
+tBodyGyro-mean()-Z|see narrative above|
+tBodyGyroJerk-mean()-X|see narrative above|
+tBodyGyroJerk-mean()-Y|see narrative above|
+tBodyGyroJerk-mean()-Z|see narrative above|
+tBodyAccMag-mean()|see narrative above|
+tGravityAccMag-mean()|see narrative above|
+tBodyAccJerkMag-mean()|see narrative above|
+tBodyGyroMag-mean()|see narrative above|
+tBodyGyroJerkMag-mean()|see narrative above|
+fBodyAcc-mean()-X|see narrative above|
+fBodyAcc-mean()-Y|see narrative above|
+fBodyAcc-mean()-Z|see narrative above|
+fBodyAccJerk-mean()-X|see narrative above|
+fBodyAccJerk-mean()-Y|see narrative above|
+fBodyAccJerk-mean()-Z|see narrative above|
+fBodyGyro-mean()-X|see narrative above|
+fBodyGyro-mean()-Y|see narrative above|
+fBodyGyro-mean()-Z|see narrative above|
+fBodyAccMag-mean()|see narrative above|
+fBodyBodyAccJerkMag-mean()|see narrative above|
+fBodyBodyGyroMag-mean()|see narrative above|
+fBodyBodyGyroJerkMag-mean()|see narrative above|
+tBodyAcc-std()-X|see narrative above|
+tBodyAcc-std()-Y|see narrative above|
+tBodyAcc-std()-Z|see narrative above|
+tGravityAcc-std()-X|see narrative above|
+tGravityAcc-std()-Y|see narrative above|
+tGravityAcc-std()-Z|see narrative above|
+tBodyAccJerk-std()-X|see narrative above|
+tBodyAccJerk-std()-Y|see narrative above|
+tBodyAccJerk-std()-Z|see narrative above|
+tBodyGyro-std()-X|see narrative above|
+tBodyGyro-std()-Y|see narrative above|
+tBodyGyro-std()-Z|see narrative above|
+tBodyGyroJerk-std()-X|see narrative above|
+tBodyGyroJerk-std()-Y|see narrative above|
+tBodyGyroJerk-std()-Z|see narrative above|
+tBodyAccMag-std()|see narrative above|
+tGravityAccMag-std()|see narrative above|
+tBodyAccJerkMag-std()|see narrative above|
+tBodyGyroMag-std()|see narrative above|
+tBodyGyroJerkMag-std()|see narrative above|
+fBodyAcc-std()-X|see narrative above|
+fBodyAcc-std()-Y|see narrative above|
+fBodyAcc-std()-Z|see narrative above|
+fBodyAccJerk-std()-X|see narrative above|
+fBodyAccJerk-std()-Y|see narrative above|
+fBodyAccJerk-std()-Z|see narrative above|
+fBodyGyro-std()-X|see narrative above|
+fBodyGyro-std()-Y|see narrative above|
+fBodyGyro-std()-Z|see narrative above|
+fBodyAccMag-std()|see narrative above|
+fBodyBodyAccJerkMag-std()|see narrative above|
+fBodyBodyGyroMag-std()|see narrative above|
+fBodyBodyGyroJerkMag-std()|see narrative above|
+
+###Original dataset
+The original dataset can be downloaded from:
+
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
+A full description is available at the site where the data was obtained:
+
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
